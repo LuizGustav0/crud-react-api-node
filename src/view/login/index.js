@@ -3,6 +3,13 @@ import { render } from 'react-dom';
 import './login.css';
 import api from '../../services/api';
 
+import facebook from './images/facebook.png';
+import google from './images/google.png';
+import twitter from './images/twitter.png';
+import github from './images/github.png';
+
+
+
 class Register extends Component {
     constructor(props) {
         super(props);
@@ -37,16 +44,12 @@ class Register extends Component {
                         : '';
                 break;
             case 'email':
-                errors.email =
-                    validEmailRegex.test(value)
-                        ? ''
-                        : 'Email is not valid!';
+                this.state.emailInvalid = false;
+                errors.email = validEmailRegex.test(value) ? '' : 'Email is not valid!';
                 break;
             case 'password':
-                errors.password =
-                    value.length < 8
-                        ? 'Password must be 8 characters long!'
-                        : '';
+                this.state.passwordInvalid = false;
+                errors.password = value.length < 8 ? 'Password must be 8 characters long!' : '';
                 break;
             default:
                 break;
@@ -76,15 +79,8 @@ class Register extends Component {
             this.state.emailInvalid = false;
         }
 
-        try {
-            if (validateForm(this.state.errors) && this.state.formValid === false && this.state.email && this.state.password) {
-                alert('valid');
 
 
-            }
-        } catch (error) {
-            console.info(error)
-        }
 
 
         try {
@@ -108,10 +104,6 @@ class Register extends Component {
                     alert("Login inavlido");
                 }
             }
-
-
-
-
 
         } catch (error) {
             alert("login invalido");
@@ -144,11 +136,10 @@ class Register extends Component {
                                             required
                                         />
                                         <label htmlFor="email">Email address</label>
-                                        {errors.email.length > 0  &&
+                                        {errors.email.length > 0 &&
                                             <span className='error'>{errors.email}</span>}
 
-                                        {this.state.emailInvalid &&
-                                            <span className='error'>Email invalid</span>}
+                                        {this.state.emailInvalid && <span className='error'>Email is not valid!</span>}
                                     </div>
 
 
@@ -161,8 +152,8 @@ class Register extends Component {
                                             onChange={this.handleChange}
                                             noValidate />
                                         <label htmlFor="password">Password</label>
-                                        {errors.password.length > 0 || this.state.passwordInvalid &&
-                                            <span className='error'>{errors.password}</span>}
+                                        {errors.password.length > 0 && <span className='error'>{errors.password}</span>}
+                                        {this.state.passwordInvalid && <span className='error'>Password must be 8 characters long!</span>}
 
 
                                     </div>
@@ -171,8 +162,8 @@ class Register extends Component {
                                         <input type="checkbox" className="custom-control-input" id="customCheck1" />
                                         <label className="custom-control-label" for="customCheck1">Remember password</label>
                                     </div>
-                                    <button type="submit" className="btn btn-lg btn-primary btn-block text-uppercase" >Sign in</button>
-
+                                    <button type="submit" className="btn-lg btn-login btn-block text-uppercase" >Sign in</button>
+                                            
 
 
                                     <div className="text-center my-4 option">
@@ -183,10 +174,24 @@ class Register extends Component {
 
                                     <hr className="my-4" />
                                     <p className="text-center gray">Or Sign up Using</p>
-                                    <button className="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i className="fab fa-google mr-2"></i> Sign in with Google</button>
-                                    <button className="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i className="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>
 
-                                    {this.state.errorCount !== null ? <p className="form-status">Form is {formValid ? 'valid ✅' : 'invalid ❌'}</p> : 'Form not submitted'}
+                                    <div className="socialMedia">
+                                        <a href="#">
+                                            <img src={facebook} width="50px" height="auto" alt="IMG" />
+                                        </a>
+                                        <a href="#">
+                                            <img src={google} width="50px" height="auto" alt="IMG" />
+                                        </a>
+                                        <a href="#">
+                                            <img src={twitter} width="50px" height="auto" alt="IMG" />
+                                        </a>
+
+                                        <a href="#">
+                                            <img src={github} width="50px" height="auto" alt="IMG" />
+                                        </a>
+                                    </div>
+
+
                                 </form>
                             </div>
                         </div>

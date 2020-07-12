@@ -1,24 +1,23 @@
 :root {
-    --input-padding-x: 1.5rem;
-    --input-padding-y: .75rem;
-  }
+  --input-padding-x: 1.5rem;
+  --input-padding-y: .75rem;
+}
 
 body {
-  background: #E0E0E0;
-
+  background: #E5E6F0;
 }
 
 .login-content {
-    min-height: 100%;  
-    min-height: 100vh; 
-    display: flex;
-    align-items: center;
+  min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .card-signin {
   border: 0;
   border-radius: 1rem;
-  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.3);
 }
 
 .card-signin .card-title {
@@ -35,50 +34,38 @@ body {
   width: 100%;
 }
 
-.form-signin .btn-primary {
-    background-color: #DA062C;
-    border: none;
+.btn-login {
+  background-color: #DA062C;
+  border: none;
+  color: #ffffff;
+  transition: all 0.5s;
+  position: relative;
 }
 
-
-.form-signin .btn-primary {
-	color: #FFF;
-	transition: all 0.5s;
-	position: relative;
-}
-.form-signin .btn-primary::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	background-color: rgba(255,255,255,0.1);
-	transition: all 0.3s;
-}
-.form-signin .btn-primary:hover::before {
-	opacity: 0 ;
-	transform: scale(0.5,0.5);
-}
-.form-signin .btn-primary::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	opacity: 0;
-	transition: all 0.3s;
-	border: 1px solid rgba(255,255,255,0.5);
-	transform: scale(1.2,1.2);
-}
-.form-signin .btn-primary:hover::after {
-	opacity: 1;
-	transform: scale(1,1);
+.btn-login::before {
+  color: #ffffff;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
 }
 
+.btn-login:hover::before {
+ color: #ffffff;
+  background-color: #b90324;
+  opacity: 0;
+  transform: scale(0.5, 0.5);
+}
+
+.btn-login:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
 
 .form-signin .btn {
   font-size: 80%;
@@ -99,8 +86,7 @@ body {
   border-radius: 8px;
 }
 
-.form-label-group>input,
-.form-label-group>label {
+.form-label-group>input, .form-label-group>label {
   padding: var(--input-padding-y) var(--input-padding-x);
 }
 
@@ -120,13 +106,13 @@ body {
 }
 
 .option a {
-    text-decoration: none;
-    color: #495057;
-    cursor: pointer;
+  text-decoration: none;
+  color: #495057;
+  cursor: pointer;
 }
 
-.option a:hover{
-    color: #DA062C;
+.option a:hover {
+  color: #DA062C;
 }
 
 .form-label-group input::-webkit-input-placeholder {
@@ -161,53 +147,51 @@ body {
   color: #777;
 }
 
-.btn-google {
-  color: white;
-  background-color: #ea4335;
-}
-
-.btn-facebook {
-  color: white;
-  background-color: #3b5998;
-}
-
-
-
 /* SHAKE ERRORS */
 
 input.error {
-    border: 1px solid #EADAE4;
-  }
-  
-  .error {
-    color:#db2269;
-    font-size: 0.625em;
-    display: relative;
-  }
+  border: 1px solid #EADAE4;
+}
+
+.error {
+  color: #DA062C;
+  font-weight: bold;
+  font-size: 12px;
+  display: relative;
+}
+
 .shake {
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
+  animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
   }
-  
-  @keyframes shake {
-    10%, 90% {
-      transform: translate3d(-1px, 0, 0);
-    }
-    
-    20%, 80% {
-      transform: translate3d(2px, 0, 0);
-    }
-  
-    30%, 50%, 70% {
-      transform: translate3d(-4px, 0, 0);
-    }
-  
-    40%, 60% {
-      transform: translate3d(4px, 0, 0);
-    }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
   }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+/* Social Media */
+
+.socialMedia {
+  flex-direction: row;
+  text-align: center;
+}
+
+.socialMedia a {
+  padding-right: 20px;
+}
 
 /* Fallback for Edge
 -------------------------------------------------- */
@@ -224,8 +208,7 @@ input.error {
 /* Fallback for IE
 -------------------------------------------------- */
 
-@media all and (-ms-high-contrast: none),
-(-ms-high-contrast: active) {
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .form-label-group>label {
     display: none;
   }
