@@ -12,6 +12,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
+
 }
 
 .card-signin {
@@ -166,6 +167,8 @@ input.error {
   backface-visibility: hidden;
   perspective: 1000px;
 }
+
+
 
 @keyframes shake {
   10%, 90% {
