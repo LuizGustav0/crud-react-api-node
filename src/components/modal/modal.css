@@ -4,10 +4,8 @@
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
     transition: all .8s;  
     position: absolute;
-
     z-index: 1000;
-    align-items: center;
-  
+    align-items: center;  
     position: absolute;
     left: calc(50% - 100px);
     top: calc(50% - 100px);
@@ -24,18 +22,31 @@
 }
 
 .modal-header {
-    background: #263238;
-    height: 40px;
+    background-color: #DA062C;
+    height: 100%;
     line-height: 40px;
-    padding: 5px 20px;
+    padding: 5px ;
     text-align: right;
 }
 
-.modal-header h3 {
+.modal-header h4 {
+    font-size: 20px;
     color: white;
     float: left;
     margin: 0;
     padding: 0;
+}
+
+
+.close-modal-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;   
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffffff;
 }
 
 .modal-body {
@@ -44,31 +55,25 @@
 }
 
 .modal-footer {
-    background: #263238;
+    background-color: #ffffff;
     height: 35px;
     padding: 15px;
 }
 
-.close-modal-btn {
-    color: white;
-    cursor: pointer;
-    float: right;
-    font-size: 30px;
-    margin: 0;
-}
+
 
 .close-modal-btn:hover {
     color: black;
 }
 
 .btn-cancel, .btn-continue {
-    background: coral;
+    background-color: #DA062C;
     border: none;
     color: white;
     cursor: pointer;
     font-weight: bold;
     outline: none;
-    padding: 10px;
+    padding: 0 10px  0 10px;
 }
 
 .btn-cancel {
@@ -77,8 +82,9 @@
 }
 
 .btn-continue {
-    background-color: #1b5e20;
-    float: right;
+    background-color: #DA062C;
+    float: center;
+    text-align: center;
 }
 
 .back-drop {

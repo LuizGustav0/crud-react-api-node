@@ -16,7 +16,7 @@ const modal = (props) => {
             }}
                 >
                 <div className="modal-header">
-                    <h3>Modal Header</h3>
+                    <h4 className="title-modal">Error</h4>
                     <span className="close-modal-btn" onClick={props.close}>×</span>
                 </div>
                 <div className="modal-body">
@@ -25,8 +25,8 @@ const modal = (props) => {
                     </p>
                 </div>
                 <div className="modal-footer">
-                    <button className="btn-cancel" onClick={props.close}>CLOSE</button>
-                    <button className="btn-continue">CONTINUE</button>
+                    <button className="btn-continue" onClick={props.close}>OK</button>
+                    
                 </div>
             </div>
         </div>
