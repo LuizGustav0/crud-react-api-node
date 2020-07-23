@@ -1,5 +1,21 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Base api
+https://github.com/LuizGustav0/apiNode
+
+## Simple navigation
+![navigation](https://github.com/LuizGustav0/crud-react-api-node/img/nav.gif)
+
+## Sign in
+![signin](https://github.com/LuizGustav0/crud-react-api-node/img/signin.gif)
+
+## Register
+![register](https://github.com/LuizGustav0/crud-react-api-node/img/register.gif)
+
+## Forgot + Reset Password
+![resetpassword](https://github.com/LuizGustav0/crud-react-api-node/img/resetPass.gif)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
