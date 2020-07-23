@@ -4,16 +4,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 https://github.com/LuizGustav0/apiNode
 
 ## Simple navigation
-![navigation](https://github.com/LuizGustav0/crud-react-api-node/img/nav.gif)
+![navigation](https://github.com/LuizGustav0/crud-react-api-node/blob/master/img/nav.gif)
 
 ## Sign in
-![signin](https://github.com/LuizGustav0/crud-react-api-node/img/signin.gif)
+![signin](https://github.com/LuizGustav0/crud-react-api-node/blob/master/img/signin.gif)
 
 ## Register
-![register](https://github.com/LuizGustav0/crud-react-api-node/img/register.gif)
+![register](https://github.com/LuizGustav0/crud-react-api-node/blob/master/img/register.gif)
 
 ## Forgot + Reset Password
-![resetpassword](https://github.com/LuizGustav0/crud-react-api-node/img/resetPass.gif)
+![resetpassword](https://github.com/LuizGustav0/crud-react-api-node/blob/master/img/resetPass.gif)
 
 
 ## Available Scripts
